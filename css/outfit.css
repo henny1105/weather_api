@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+}
+body .outfit_wrap {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transform: rotate(270deg) translateX(-100%);
+  transform-origin: top left;
+  background-color: #999;
+  position: absolute;
+  width: 100vh;
+  height: 100vw;
+}
+body .outfit_wrap .container {
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+  white-space: nowrap;
+  font-size: 0;
+}
+body .outfit_wrap .container .section {
+  width: 100vw;
+  height: 100vh;
+  display: inline-block;
+  position: relative;
+}
+body .outfit_wrap .container .sec01 {
+  background-color: #45CCFF;
+}
+body .outfit_wrap .container .sec02 {
+  background-color: #49E83E;
+}
+body .outfit_wrap .container .sec03 {
+  background-color: #EDDE05;
+}
+body .outfit_wrap .container .sec04 {
+  background-color: #E84B30;
+}
+
+/*# sourceMappingURL=outfit.css.map */
