@@ -99,21 +99,21 @@ body {
       width: 1920px;
       justify-content: space-between;
       margin-top: 150px; }
-      #container .inner .weather_info .contry_info {
+      #container .inner .weather_info .country_info {
         width: 310px;
         height: 360px;
         cursor: pointer; }
-        #container .inner .weather_info .contry_info img {
+        #container .inner .weather_info .country_info img {
           object-fit: cover;
           width: 100%;
           height: 100%; }
-        #container .inner .weather_info .contry_info:nth-of-type(1) {
+        #container .inner .weather_info .country_info:nth-of-type(1) {
           transform: translate3d(0px, 98px, 0px) rotate(-11deg); }
-        #container .inner .weather_info .contry_info:nth-of-type(2) {
+        #container .inner .weather_info .country_info:nth-of-type(2) {
           transform: translate(0px, 24px) rotate(-7deg); }
-        #container .inner .weather_info .contry_info:nth-of-type(4) {
+        #container .inner .weather_info .country_info:nth-of-type(4) {
           transform: translate(0px, 24px) rotate(7deg); }
-        #container .inner .weather_info .contry_info:nth-of-type(5) {
+        #container .inner .weather_info .country_info:nth-of-type(5) {
           transform: translate3d(0px, 98px, 0px) rotate(11deg); }
 
 .popup {
