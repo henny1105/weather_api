@@ -1,18 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/custom.js"></script>
+    <title>날씨API프로젝트</title>
+    <link rel="stylesheet" href="css/weather.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script defer src="js/custom.js"></script>
 </head>
+
 <body>
-    <h1>( ͡° ͜ʖ ͡°).</h1>
-    <h2>테스트입니다.</h2>
-    <div class="jeong_test">하이루 방가방가가가가</div>
-    <div>진짜 이 프로젝트 어떡하냐 겁나 하기 싫다 </div>
-    <div class="suji_test">안냐류</div>
+    <div class="loading">
+        <div class="inner">
+            <div class="loading_desc n1">
+                <div class="loading_title">
+                    <strong>ICS COLLEGE OF ARTS</strong>
+                </div>
+                <div class="loading_logo">WEATHER</div>
+            </div>
+            <div class="loading_desc n2">
+                <div class="loading_title">
+                    <strong>ICS COLLEGE OF ARTS</strong>
+                </div>
+                <div class="loading_logo">INFORMATION</div>
+            </div>
+            <div class="loading_desc n3">
+                <div class="loading_title">
+                    <strong>ICS COLLEGE OF ARTS</strong>
+                </div>
+                <div class="loading_logo">KIMHYEIN</div>
+            </div>
+
+        </div>
+    </div>
+    <div id="container">
+        <div class="inner">
+            <h1>TODAY'S WEATEHR
+                <span>World Weather Information</span>
+            </h1>
+            <div class="weather_info">
+                <div class="contry_info japan">
+                    <img src="img/img1.jpg" alt="">
+                    <div class="contry_name">
+                        <h3>JAPAN</h3>
+                        <span>tokyo</span>
+                    </div>
+                </div>
+                <div class="contry_info china">
+                    <img src="img/img2.png" alt="">
+                    <div class="contry_name">
+                        <h3>CHINA</h3>
+                        <span>beijing</span>
+                    </div>
+                </div>
+                <div class="contry_info america">
+                    <img src="img/img3.jpg" alt="">
+                    <div class="contry_name">
+                        <h3>US</h3>
+                        <span>newyork</span>
+                    </div>
+                </div>
+                <div class="contry_info france">
+                    <img src="img/img4.jpg" alt="">
+                    <div class="contry_name">
+                        <h3>FRANCE</h3>
+                        <span>paris</span>
+                    </div>
+                </div>
+                <div class="contry_info australia">
+                    <img src="img/img5.jpg" alt="">
+                    <div class="contry_name">
+                        <h3>AUSTRALIA</h3>
+                        <span>sydney</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup tokyo">
+        <div class="inner">
+            <div class="img_box">
+                <img src="img/img1.jpg" alt="">
+            </div>
+            <div class="txt_box">
+                <h2>tokyo</h2>
+                <div class="weather_info">
+                    <div class="temp">NOW TEMP : <span></span></div>
+                    <div class="temp_min">MIN TEMP : <span></span></div>
+                    <div class="temp_max">MAX TEMP : <span></span></div>
+                    <div class="weather">WEATHER : <span></span></div>
+                    <div class="weather_desc">WEATHER DESCRIPTION : <span></span></div>
+                    <div class="humidity">HUMIDITY : <span></span></div>
+
+                    <div class="wind">WIND : <span></span></div>
+                    <div class="cloudy">CLOUDS : <span></span></div>
+                    <div class="imgSrc">WAETEHR IMAGE : <span></span></div>
+                </div>
+            </div>
+            <div class="icon">
+                <img src="img/icon_close.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="popup beijing">
+        <div class="inner">
+            <div class="img_box">
+                <img src="img/img2.png" alt="">
+            </div>
+            <div class="txt_box">
+                <h2>beijing</h2>
+                <div class="weather_info">
+                    <div class="temp">NOW TEMP : <span></span></div>
+                    <div class="temp_min">MIN TEMP : <span></span></div>
+                    <div class="temp_max">MAX TEMP : <span></span></div>
+                    <div class="weather">WEATHER : <span></span></div>
+                    <div class="weather_desc">WEATHER DESCRIPTION : <span></span></div>
+                    <div class="humidity">HUMIDITY : <span></span></div>
+
+                    <div class="wind">WIND : <span></span></div>
+                    <div class="cloudy">CLOUDS : <span></span></div>
+                    <div class="imgSrc">WAETEHR IMAGE : <span></span></div>
+                </div>
+            </div>
+            <div class="icon">
+                <img src="img/icon_close.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="popup newyork">
+        <div class="inner">
+            <div class="img_box">
+                <img src="img/img3.jpg" alt="">
+            </div>
+            <div class="txt_box">
+                <h2>newyork</h2>
+                <div class="weather_info">
+                    <div class="temp">NOW TEMP : <span></span></div>
+                    <div class="temp_min">MIN TEMP : <span></span></div>
+                    <div class="temp_max">MAX TEMP : <span></span></div>
+                    <div class="weather">WEATHER : <span></span></div>
+                    <div class="weather_desc">WEATHER DESCRIPTION : <span></span></div>
+                    <div class="humidity">HUMIDITY : <span></span></div>
+
+                    <div class="wind">WIND : <span></span></div>
+                    <div class="cloudy">CLOUDS : <span></span></div>
+                    <div class="imgSrc">WAETEHR IMAGE : <span></span></div>
+                </div>
+            </div>
+            <div class="icon">
+                <img src="img/icon_close.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="popup paris">
+        <div class="inner">
+            <div class="img_box">
+                <img src="img/img4.jpg" alt="">
+            </div>
+            <div class="txt_box">
+                <h2>paris</h2>
+                <div class="weather_info">
+                    <div class="temp">NOW TEMP : <span></span></div>
+                    <div class="temp_min">MIN TEMP : <span></span></div>
+                    <div class="temp_max">MAX TEMP : <span></span></div>
+                    <div class="weather">WEATHER : <span></span></div>
+                    <div class="weather_desc">WEATHER DESCRIPTION : <span></span></div>
+                    <div class="humidity">HUMIDITY : <span></span></div>
+
+                    <div class="wind">WIND : <span></span></div>
+                    <div class="cloudy">CLOUDS : <span></span></div>
+                    <div class="imgSrc">WAETEHR IMAGE : <span></span></div>
+                </div>
+            </div>
+            <div class="icon">
+                <img src="img/icon_close.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="popup sydney">
+        <div class="inner">
+            <div class="img_box">
+                <img src="img/img5.jpg" alt="">
+            </div>
+            <div class="txt_box">
+                <h2>sydney</h2>
+                <div class="weather_info">
+                    <div class="temp">NOW TEMP : <span></span></div>
+                    <div class="temp_min">MIN TEMP : <span></span></div>
+                    <div class="temp_max">MAX TEMP : <span></span></div>
+                    <div class="weather">WEATHER : <span></span></div>
+                    <div class="weather_desc">WEATHER DESCRIPTION : <span></span></div>
+                    <div class="humidity">HUMIDITY : <span></span></div>
+
+                    <div class="wind">WIND : <span></span></div>
+                    <div class="cloudy">CLOUDS : <span></span></div>
+                    <div class="imgSrc">WAETEHR IMAGE : <span></span></div>
+                </div>
+            </div>
+            <div class="icon">
+                <img src="img/icon_close.png" alt="">
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>
