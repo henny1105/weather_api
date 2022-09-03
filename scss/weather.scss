@@ -1,0 +1,285 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+    font-weight: 300;
+}
+
+.hidden {
+    display: none;
+}
+
+.dn {
+    display: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+// 로딩 레이아웃 check
+
+.loading {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background: rgb(209, 233, 255);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 9999;
+
+    &.show {
+        display: block;
+        opacity: 1;
+        transition: opacity .2s cubic-bezier(.25, .46, .45, .94);
+    }
+
+    &.on {
+        height: 0;
+        transition: all 1s;
+    }
+
+    .inner {
+        // width: 1216px;
+        height: 100%;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+
+        &.on {
+            opacity: 0;
+            transition: all 1s;
+        }
+
+        .loading_desc {
+            display: flex;
+            align-items: center;
+            position: absolute;
+
+            .loading_title {
+                padding-right: 100px;
+            }
+
+            .loading_logo {
+                font-family: 'Passion One', cursive;
+                font-size: 230px;
+            }
+
+            &.n1 {
+                right: 44px;
+                top: 0;
+                animation: fadeInRight 1s cubic-bezier(.41, .49, .83, .67);
+
+            }
+
+            &.n2 {
+                left: 0;
+                top: 50%;
+                transform: translate(0, -50%);
+                animation: fadeInLeft 1s cubic-bezier(.41, .49, .83, .67);
+            }
+
+            &.n3 {
+                right: 180px;
+                bottom: 0;
+                animation: fadeInRight 1s cubic-bezier(.41, .49, .83, .67);
+            }
+        }
+    }
+
+}
+
+
+#container {
+    width: 100%;
+    height: 100vh;
+    background: #fafafa;
+    overflow: hidden;
+    background: linear-gradient(25deg, #fafafa, #b1c4d5);
+    opacity: 0;
+
+    &.on {
+        opacity: 1;
+        transition: 1s;
+    }
+
+    .inner {
+        position: relative;
+        margin: 0 auto;
+
+        h1 {
+            padding-top: 120px;
+            text-align: center;
+            font-size: 60px;
+
+            span {
+                display: block;
+                font-size: 20px;
+            }
+        }
+
+        .weather_info {
+            display: flex;
+            width: 1920px;
+            justify-content: space-between;
+            margin-top: 150px;
+
+            .country_info {
+                width: 310px;
+                height: 360px;
+                cursor: pointer;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &:nth-of-type(1) {
+                    transform: translate3d(0px, 98px, 0px) rotate(-11deg);
+                }
+
+                &:nth-of-type(2) {
+                    transform: translate(0px, 24px) rotate(-7deg);
+                }
+
+                &:nth-of-type(3) {}
+
+                &:nth-of-type(4) {
+                    transform: translate(0px, 24px) rotate(7deg);
+                }
+
+                &:nth-of-type(5) {
+                    transform: translate3d(0px, 98px, 0px) rotate(11deg);
+                }
+            }
+        }
+
+    }
+
+}
+
+
+.popup {
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    background: #efefef;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+    z-index: -1;
+
+    .inner {
+        width: 1450px;
+        margin: 0 auto;
+        padding: 100px 0;
+        display: flex;
+
+        .img_box {
+            width: 50%;
+
+            img {
+                width: 600px;
+                height: 800px;
+                object-fit: cover;
+            }
+        }
+
+        .txt_box {
+            width: 50%;
+
+            h2 {
+                font-size: 120px;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+
+            .weather_info {
+                background: #fff;
+                padding: 30px;
+                border-radius: 10px;
+
+                div {
+                    line-height: 2;
+                    font-size: 18px;
+                    font-weight: 500;
+
+                    span {
+                        font-size: 16px;
+                    }
+                }
+
+                .imgSrc {
+                    display: flex;
+                    align-items: center;
+                }
+
+
+            }
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 100px;
+            top: 80px;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+
+    }
+}
+
+// animation
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translate3d(-100%, -50%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0, -50%);
+    }
+}
