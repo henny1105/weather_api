@@ -35,5 +35,7 @@ body .outfit_wrap .container .sec03 {
 body .outfit_wrap .container .sec04 {
   background-color: #E84B30;
 }
-
+.outfit_wrap::-webkit-scrollbar {
+  display: none;
+}
 /*# sourceMappingURL=outfit.css.map */
